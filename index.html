@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CONTROL HE PROYECTOS Y GGRR</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body>
+<header>CONTROL HE PROYECTOS Y GGRR</header>
+<section class="controls">
+  <div class="row">
+    <div><label>Año</label><select id="year"></select></div>
+    <div><label>Mes</label><select id="month"></select></div>
+  </div>
+  <div class="row">
+    <div><label>Días a trabajar</label><input type="number" id="targetDays" placeholder=""></div>
+    <div><label>Precio Hora Extra (€)</label><input type="number" id="priceHE" step="0.01" placeholder=""></div>
+  </div>
+</section>
+<div class="weekdays"><div>L</div><div>M</div><div>X</div><div>J</div><div>V</div><div>S</div><div>D</div></div>
+<section id="calendar" class="calendar"></section>
+<section class="summary">
+<div class="summary-left">
+<div>🎯 Objetivo: <span id="objective">0</span> h</div>
+<div>⏱ Realizadas: <span id="workedHours">0</span> h</div>
+<div>➕➖ Diferencia: <span id="difference">0</span> h</div>
+<div>💼 Horas extra: <span id="heHours">0</span> h</div>
+<div>💶 Total HE Turno: <span id="heTurno">0</span> €</div>
+<div>💶 Total HE Refuerzo: <span id="heRefuerzo">0</span> €</div>
+<div>📅 Días trabajados: <span id="workedDays">0</span></div>
+<div id="countByShift" class="counts"></div>
+</div>
+<div class="summary-right"><img src="marca-agua.png"></div>
+</section>
+<button id="pdfBtn">📄 Exportar PDF</button>
+<script src="storage.js"></script>
+<script src="app.js"></script>
+<script src="pdf.js"></script>
+</body></html>

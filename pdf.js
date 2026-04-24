@@ -1,0 +1,1 @@
+document.getElementById("pdfBtn").onclick=()=>window.print();
